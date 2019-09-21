@@ -28,8 +28,10 @@ export default class WordCard extends Component{
         if(guess.length == this.state.chars.length){
             if(guess == this.state.word){
                 this.setState({guess : [] , completed: true})
+                alert("You WIN!!")
             }else{
                 this.setState({guess : [] , attempt: this.state.attempt+1})
+                alert("You LOSE!! Try Again")
             }
         }
     }
@@ -37,12 +39,14 @@ export default class WordCard extends Component{
     render(){
         return(
             <div className = "App">
+            <p>Card-Game</p>
+            <p>Round : {this.state.attempt}</p>
             {
                 Array.from(this.state.chars).map((c,i) => <CharacterCard value = {c} key={i} attempt = {this.state.attempt}
                 activationHandler = {this.activationHandler}/>)
             }
             
-            <p>{this.state.completed? "WIN":" "}{this.state.attempt}</p>
+            <p>{this.state.completed? "WIN":" "}</p>
             </div>
         )
     }
