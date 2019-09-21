@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import WordCard from "./WordCard";
+import Timer from "./Timer"
 import './App.css';
 const word = "Hello"
 class App extends Component { 
@@ -7,6 +8,7 @@ class App extends Component {
     return ( 
     <div className="App">
       <WordCard value = {word}/>
+      <Timer/>
     </div> 
     ); 
   } 
