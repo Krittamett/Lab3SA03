@@ -1,11 +1,6 @@
 import React, { Component } from 'react';
 
  export class Addname extends Component{
-    constructor(props){
-        super(props)
-        alert("---- Welcome ------")
-    }
-
     render(){
         return(
             <div className="addname">
